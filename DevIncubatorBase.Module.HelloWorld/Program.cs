@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorBase.Module.HelloWorld
+namespace DevIncubatorCore.Module.HelloWorld
 {
     class Program
     {

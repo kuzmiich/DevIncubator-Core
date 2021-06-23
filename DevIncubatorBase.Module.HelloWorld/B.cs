@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevIncubatorBase.Module.HelloWorld
+namespace DevIncubatorCore.Module.HelloWorld
 {
     class B : ITask
     {

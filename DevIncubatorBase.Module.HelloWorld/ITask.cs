@@ -1,5 +1,5 @@
 ﻿
-namespace DevIncubatorBase.Module.HelloWorld
+namespace DevIncubatorCore.Module.HelloWorld
 {
     interface ITask
     {
