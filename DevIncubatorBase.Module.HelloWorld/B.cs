@@ -10,7 +10,21 @@ namespace DevIncubatorCore.Module.HelloWorld
     {
         public void RunTask()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Input double value: ");
+            var d = Extractor.GetDouble(Console.ReadLine());
+
+            Console.WriteLine("Input byte value: ");
+            var b = Extractor.GetByte(Console.ReadLine());
+
+            Console.WriteLine("Input char value: ");
+            var c = Extractor.GetChar(Console.ReadLine());
+
+            if (d == default || b == default || c == default)
+            {
+                Console.WriteLine("Runtime error");
+                return;
+            }
+            Console.WriteLine($"{d} {b} {c}");
         }
     }
 }

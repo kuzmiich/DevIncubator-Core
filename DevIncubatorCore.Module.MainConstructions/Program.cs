@@ -1,22 +1,17 @@
 ﻿using System;
 
-namespace DevIncubatorCore.Module.HelloWorld
+namespace DevIncubatorCore.Module.MainConstructions
 {
     class Program
     {
-        internal static void Main(string[] args)
+        static void Main(string[] args)
         {
             ITask[] tasks =
             {
-                new A(),
-                new B(),
-                new C(),
-                new D(),
-                new E(),
-                new F(),
-                new G(),
-                new H(),
-                new I(),
+                new MultiplicationTable(), // +
+                new Days(), // +
+                new EvenNumbers(), // +
+                new ComparisonDigits(),  // +
             };
             try
             {
