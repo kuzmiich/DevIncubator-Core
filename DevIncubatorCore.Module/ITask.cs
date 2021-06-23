@@ -1,4 +1,4 @@
-﻿namespace DevIncubatorCore.Module
+﻿namespace DevIncubatorCore
 {
     public interface ITask
     {

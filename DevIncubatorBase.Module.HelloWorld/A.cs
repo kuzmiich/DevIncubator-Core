@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.Module.HelloWorld
+namespace DevIncubatorCore.HelloWorld
 {
     class A : ITask
     {

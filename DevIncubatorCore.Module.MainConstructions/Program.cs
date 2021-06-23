@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.Module.MainConstructions
+namespace DevIncubatorCore.MainConstructions
 {
     class Program
     {
