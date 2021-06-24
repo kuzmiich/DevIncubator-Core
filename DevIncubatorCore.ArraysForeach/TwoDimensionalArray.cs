@@ -9,20 +9,18 @@ namespace DevIncubatorCore.Methods
 {
     class TwoDimensionalArray : ITask
     {
-        private int Sum(int[,] arr, int n, int m)
+        private static int Sum(int[,] arr)
         {
             int sum = 0;
-            for (int i = 0; i < n; i++)
+
+            foreach (var element in arr)
             {
-                for (int j = 0; j < m; j++)
-                {
-                    sum += arr[i, j];
-                }
+                sum += element;
             }
 
             return sum;
         }
-        private int[,] GetArrayElementDifference(int[,] arr, int n, int m)
+        private static int[,] GetArrayElementDifference(int[,] arr, int n, int m)
         {
             for (int i = 0; i < n; i++)
             {
@@ -34,7 +32,7 @@ namespace DevIncubatorCore.Methods
 
             return arr;
         }
-        private void PrettyShowArray(int[,] arr, int n, int m)
+        private static void PrettyShowArray(int[,] arr, int n, int m)
         {
             for (int i = 0; i < n; i++)
             {
@@ -66,7 +64,7 @@ namespace DevIncubatorCore.Methods
             
             Console.WriteLine($"Length - {arr.Length}");
             Console.WriteLine($"Array dimension - {arr.Rank}");
-            Console.WriteLine($"Sum elements = {Sum(arr, n, m)}");
+            Console.WriteLine($"Sum elements = {Sum(arr)}");
         }
     }
 }
