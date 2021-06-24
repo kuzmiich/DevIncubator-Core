@@ -21,12 +21,14 @@ namespace DevIncubatorCore.Module.MainConstructions
                 (n, m) = (m, n); // swap
             }
 
+            // if n not even
+            if (n % 2 != 0)
+            {
+                n++;
+            }
+
             for (int i = n; i <= m; i += 2)
             {
-                if (i % 2 != 0)
-                {
-                    i++;
-                }
                 Console.Write($"{i} ");
             }
             Console.WriteLine();
