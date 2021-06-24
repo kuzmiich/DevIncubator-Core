@@ -26,6 +26,12 @@ namespace DevIncubatorCore.MainConstructions
                 n++;
             }
 
+            // if n not even
+            if (n % 2 != 0)
+            {
+                n++;
+            }
+
             for (int i = n; i <= m; i += 2)
             {
                 Console.Write($"{i} ");
