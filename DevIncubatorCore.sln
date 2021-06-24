@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.MainConstr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Methods", "DevIncubatorCore.Methods\DevIncubatorCore.Methods.csproj", "{07AA98B4-DCCA-4C76-A3DD-C743A1104342}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.ArraysForeach", "DevIncubatorCore.ArraysForeach\DevIncubatorCore.ArraysForeach.csproj", "{CC9E5E87-300B-4F3C-B29E-DD1C53357789}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{07AA98B4-DCCA-4C76-A3DD-C743A1104342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07AA98B4-DCCA-4C76-A3DD-C743A1104342}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07AA98B4-DCCA-4C76-A3DD-C743A1104342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9E5E87-300B-4F3C-B29E-DD1C53357789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9E5E87-300B-4F3C-B29E-DD1C53357789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9E5E87-300B-4F3C-B29E-DD1C53357789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9E5E87-300B-4F3C-B29E-DD1C53357789}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

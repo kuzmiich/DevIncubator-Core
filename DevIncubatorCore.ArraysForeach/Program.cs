@@ -8,12 +8,8 @@ namespace DevIncubatorCore.Methods
         {
             ITask[] tasks =
             {
-                new Olympic(), // +
-                new Calculator(), // +
-                new EFood(), // +
-                new SwapVariable(), // +
-                new FullName(), // +
-                new TypeOfElement()
+                new BubbleSortVariable(),
+                new TwoDimensionalArray()
             };
             try
             {
