@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIncubatorCore.MainConstructions
 {
-    class ComparisonDigits : ITask
+    class ComparisonDigit : ITask
     {
         public void RunTask()
         {

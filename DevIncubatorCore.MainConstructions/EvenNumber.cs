@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevIncubatorCore.MainConstructions
 {
-    class EvenNumbers : ITask
+    class EvenNumber : ITask
     {
         public void RunTask()
         {

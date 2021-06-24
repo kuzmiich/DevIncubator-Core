@@ -1,29 +1,28 @@
 ﻿using System;
 
-namespace DevIncubatorCore.HelloWorld
+namespace DevIncubatorCore.Methods
 {
     class Program
     {
-        internal static void Main(string[] args)
+        static void Main(string[] args)
         {
             ITask[] tasks =
             {
-                new A(),
-                new B(),
-                new C(),
-                new D(),
-                new E(),
-                new F(),
-                new G(),
-                new H(),
-                new I(),
+                new Olympic(), // +
+                new Calculator(), // +
+                new EFood(), // +
+                new SwapVariable(), // +
+                new FullName(), // +
+                new TypeOfElement(),
+                new BubbleSortVariable(),
+                new TwoDimensionalArray()
             };
             try
             {
                 foreach (var task in tasks)
                 {
                     task.RunTask();
-                    Console.WriteLine(string.Empty.PadLeft(50, '-'));
+                    Console.WriteLine(string.Empty.PadLeft(70, '-'));
                 }
             }
             catch (OverflowException)
