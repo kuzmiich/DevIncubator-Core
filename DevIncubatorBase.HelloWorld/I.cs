@@ -22,7 +22,7 @@ namespace DevIncubatorCore.HelloWorld
             const string yes = "Yes";
             const string no = "No";
 
-            if (a == yes && b == yes && c == no)
+            if (a.Equals(yes) && b.Equals(yes) && c.Equals(no))
             {
                 Console.WriteLine("Today, you can go for a walk with friends.");
             }

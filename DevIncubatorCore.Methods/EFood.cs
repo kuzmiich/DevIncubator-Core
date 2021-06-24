@@ -6,16 +6,16 @@ namespace DevIncubatorCore.Methods
     {
         public void RunTask()
         {
-            Console.WriteLine("Input burgers count: ");
+            Console.Write("Input burgers count: ");
             var burgersCount = Extractor.GetInt32(Console.ReadLine());
 
-            Console.WriteLine("Input lattes count: ");
+            Console.Write("Input lattes count: ");
             var lattesCount = Extractor.GetInt32(Console.ReadLine());
 
-            Console.WriteLine("Input ice creams count: ");
+            Console.Write("Input ice creams count: ");
             var iceCreamsCount = Extractor.GetInt32(Console.ReadLine());
 
-            Console.WriteLine("Do you want >1 table set (1=yes or 0=no):");
+            Console.Write("Do you want >1 table set (1=yes or 0=no):");
             var needTable = Extractor.GetBool(Console.ReadLine());
 
             var tableSetCount = 1;

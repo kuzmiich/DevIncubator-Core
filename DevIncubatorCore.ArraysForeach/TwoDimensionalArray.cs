@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevIncubatorCore.Methods
+namespace DevIncubatorCore.ArraysForeach
 {
     class TwoDimensionalArray : ITask
     {
@@ -45,10 +45,10 @@ namespace DevIncubatorCore.Methods
         }
         public void RunTask()
         {
-            Console.WriteLine("Input n: ");
+            Console.Write("Input n: ");
             var n = Extractor.GetInt32(Console.ReadLine());
 
-            Console.WriteLine("Input m: ");
+            Console.Write("Input m: ");
             var m = Extractor.GetInt32(Console.ReadLine());
 
             if (n < 0 || m < 0)

@@ -10,13 +10,13 @@ namespace DevIncubatorCore.HelloWorld
     {
         public void RunTask()
         {
-            Console.WriteLine("Input double value: ");
+            Console.Write("Input double value: ");
             var d = Extractor.GetDouble(Console.ReadLine());
 
-            Console.WriteLine("Input byte value: ");
+            Console.Write("Input byte value: ");
             var b = Extractor.GetByte(Console.ReadLine());
 
-            Console.WriteLine("Input char value: ");
+            Console.Write("Input char value: ");
             var c = Extractor.GetChar(Console.ReadLine());
 
             if (d == default || b == default || c == default)
