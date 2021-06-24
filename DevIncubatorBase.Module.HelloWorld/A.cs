@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.Module.HelloWorld
 {
@@ -10,7 +6,15 @@ namespace DevIncubatorCore.Module.HelloWorld
     {
         public void RunTask()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Input your name: ");
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Input your age: ");
+            var userMessage = Console.ReadLine();
+
+            var age = Extractor.GetInt32(userMessage);
+
+            Console.WriteLine($"My name is {name}. My age is {age}");
         }
     }
 }
