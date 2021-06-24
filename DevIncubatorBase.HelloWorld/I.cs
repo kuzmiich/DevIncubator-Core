@@ -19,7 +19,10 @@ namespace DevIncubatorCore.HelloWorld
             Console.WriteLine("If you have debt at university?");
             var c = Console.ReadLine();
 
-            if (a == "Yes" && b == "Yes" && c == "No")
+            const string yes = "Yes";
+            const string no = "No";
+
+            if (a == yes && b == yes && c == no)
             {
                 Console.WriteLine("Today, you can go for a walk with friends.");
             }
