@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.Module.HelloWorld
+namespace DevIncubatorCore.HelloWorld
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace DevIncubatorCore.Module.HelloWorld
                 foreach (var task in tasks)
                 {
                     task.RunTask();
-                    Console.WriteLine(string.Empty.PadLeft(50, '-'));
+                    Console.WriteLine(string.Empty.PadLeft(70, '-'));
                 }
             }
             catch (OverflowException)

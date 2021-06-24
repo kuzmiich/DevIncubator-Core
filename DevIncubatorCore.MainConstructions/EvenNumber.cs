@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevIncubatorCore.Module.MainConstructions
+namespace DevIncubatorCore.MainConstructions
 {
-    class EvenNumbers : ITask
+    class EvenNumber : ITask
     {
         public void RunTask()
         {
@@ -19,6 +19,11 @@ namespace DevIncubatorCore.Module.MainConstructions
             if (n > m)
             {
                 (n, m) = (m, n); // swap
+            }
+            // if n not even
+            if (n % 2 != 0)
+            {
+                n++;
             }
 
             // if n not even

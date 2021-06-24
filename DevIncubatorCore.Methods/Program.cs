@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.Module.MainConstructions
+namespace DevIncubatorCore.Methods
 {
     class Program
     {
@@ -8,17 +8,19 @@ namespace DevIncubatorCore.Module.MainConstructions
         {
             ITask[] tasks =
             {
-                new MultiplicationTable(), // +
-                new Days(), // +
-                new EvenNumbers(), // +
-                new ComparisonDigits(),  // +
+                new Olympic(), // +
+                new Calculator(), // +
+                new EFood(), // +
+                new SwapVariable(), // +
+                new FullName(), // +
+                new TypeOfElement()
             };
             try
             {
                 foreach (var task in tasks)
                 {
                     task.RunTask();
-                    Console.WriteLine(string.Empty.PadLeft(50, '-'));
+                    Console.WriteLine(string.Empty.PadLeft(70, '-'));
                 }
             }
             catch (OverflowException)

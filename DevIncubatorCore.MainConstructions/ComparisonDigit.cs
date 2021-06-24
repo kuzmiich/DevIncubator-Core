@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevIncubatorCore.Module.MainConstructions
+namespace DevIncubatorCore.MainConstructions
 {
-    class ComparisonDigits : ITask
+    class ComparisonDigit : ITask
     {
         public void RunTask()
         {
