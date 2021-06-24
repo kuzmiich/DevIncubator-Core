@@ -24,16 +24,12 @@ namespace DevIncubatorCore.Methods
         }
         private int[,] GetArrayElementDifference(int[,] arr, int n, int m)
         {
-            int lines = 0;
-            for (int i = n; i > 0; i--)
+            for (int i = 0; i < n; i++)
             {
-                int columns = 0;
-                for (int j = m; j > 0; j--)
+                for (int j = 0; j < m; j++)
                 {
-                    arr[lines, columns] = i - j;
-                    columns++;
+                    arr[i, j] = i - j;
                 }
-                lines++;
             }
 
             return arr;
@@ -69,7 +65,7 @@ namespace DevIncubatorCore.Methods
             PrettyShowArray(arrWithDifferenceElements, n, m);
             
             Console.WriteLine($"Length - {arr.Length}");
-            Console.WriteLine($"Size {n} by {m}");
+            Console.WriteLine($"Array dimension - {arr.Rank}");
             Console.WriteLine($"Sum elements = {Sum(arr, n, m)}");
         }
     }

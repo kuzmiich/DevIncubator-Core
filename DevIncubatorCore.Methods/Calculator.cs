@@ -54,6 +54,18 @@ namespace DevIncubatorCore.Methods
             }
             return first / second;
         }
+
+        private static double Sum(params double[] arr)
+        {
+            double sum = 0;
+
+            foreach (var element in arr)
+            {
+                sum += element;
+            }
+
+            return sum;
+        }
         public void RunTask()
         {
             var a = 10;
@@ -63,9 +75,9 @@ namespace DevIncubatorCore.Methods
             Console.WriteLine($"Subtraction - {Math.Round(Subtraction(a, b), SignCount)}");
             Console.WriteLine($"Multiplication - {Math.Round(Multiplication(a, b), SignCount)}");
             Console.WriteLine($"Division - {Math.Round(Division(a, b), SignCount)}");
+            
 
-            var sumOperations = Math.Round(Addition(a, b) + Subtraction(a, b) + Multiplication(a, b) + Division(a, b), SignCount);
-            Console.WriteLine($"Sum operations - {sumOperations}");
+            Console.WriteLine($"Sum operations - {Math.Round(Sum(Addition(a, b), Subtraction(a, b), Multiplication(a, b), Division(a, b)), SignCount)}");
         }
     }
 }
