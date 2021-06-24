@@ -56,7 +56,7 @@ namespace DevIncubatorCore.Methods
         }
         public void RunTask()
         {
-            Console.WriteLine("Filling the array with values");
+            Console.WriteLine("Filling the array with values:");
             var arr = Console.ReadLine()?.Split().Select(int.Parse).ToArray();
 
             var descendingArray = BubbleSort(CompareType.Descending, arr);

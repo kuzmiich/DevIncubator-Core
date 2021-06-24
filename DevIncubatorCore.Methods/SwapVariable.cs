@@ -16,9 +16,9 @@ namespace DevIncubatorCore.Methods
         }
         public void RunTask()
         {
-            Console.WriteLine("Input first int value a:");
+            Console.Write("Input first int value a: ");
             var a = Extractor.GetInt32(Console.ReadLine());
-            Console.WriteLine("Input second int value:");
+            Console.Write("Input second int value b: ");
             var b = Extractor.GetInt32(Console.ReadLine());
             
             Swap(ref a, ref b);
