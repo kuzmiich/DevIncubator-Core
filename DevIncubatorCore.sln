@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.StringStri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.HelloWorld", "DevIncubatorCore.HelloWorld\DevIncubatorCore.HelloWorld.csproj", "{56BA3833-CD46-4DB1-B056-74F9135F87F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIncubatorCore.ReferenceValueTypesNullableTypesEnums", "DevIncubatorCore.ReferenceValueTypesNullableTypesEnums\DevIncubatorCore.ReferenceValueTypesNullableTypesEnums.csproj", "{DBCF26C0-EE82-4877-8DF2-91F459AAD91E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{56BA3833-CD46-4DB1-B056-74F9135F87F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56BA3833-CD46-4DB1-B056-74F9135F87F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56BA3833-CD46-4DB1-B056-74F9135F87F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBCF26C0-EE82-4877-8DF2-91F459AAD91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBCF26C0-EE82-4877-8DF2-91F459AAD91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBCF26C0-EE82-4877-8DF2-91F459AAD91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBCF26C0-EE82-4877-8DF2-91F459AAD91E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
