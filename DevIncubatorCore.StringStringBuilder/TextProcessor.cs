@@ -36,7 +36,6 @@ namespace DevIncubatorCore.StringStringBuilder
             var startIndex = 0;
             foreach (var symbol in builder.GetChunks())
             {
-                Console.WriteLine(symbol);
                 if (symbol.Equals(criteria))
                 {
                     break;
