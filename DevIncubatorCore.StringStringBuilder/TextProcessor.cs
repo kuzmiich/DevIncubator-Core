@@ -10,8 +10,10 @@ namespace DevIncubatorCore.StringStringBuilder
     {
         public void A()
         {
-            Console.WriteLine("Input source string: ");
+            Console.Write("Input source string: ");
             var hashSetString = Console.ReadLine()?.Split().ToHashSet();
+
+            Console.Write("String without repetitions - ");
             foreach (var str in hashSetString)
             {
                 Console.Write($"{str} ");
@@ -53,7 +55,7 @@ namespace DevIncubatorCore.StringStringBuilder
         public void B()
         {
             // get data
-            Console.WriteLine("Text: ");
+            Console.Write("Text: ");
             var splitString = Console.ReadLine()?.Split(": ", StringSplitOptions.TrimEntries);
 
             var text = new StringBuilder();
@@ -63,7 +65,7 @@ namespace DevIncubatorCore.StringStringBuilder
                 text.Append(correctString);
             }
 
-            Console.WriteLine("Operation type and data: ");
+            Console.Write("Operation type and data: ");
             var splitOperationTypeAndData = Console.ReadLine()?.Split(": ");
 
             var operationType = string.Empty;
@@ -96,7 +98,6 @@ namespace DevIncubatorCore.StringStringBuilder
                 var j = array.Length - i - 1;
                 (array[i], array[j]) = (array[j], array[i]);
             }
-            // reverse hello
         }
 
         public void C()
@@ -109,11 +110,84 @@ namespace DevIncubatorCore.StringStringBuilder
             Console.WriteLine($"Reverse string - {string.Join("", charArray)}");
         }
         //
+        private static IEnumerable<T> Split<T>(IEnumerable<T> array, T separator)
+        {
+            var splitArray = new List<T>();
+            var i = 0;
+            foreach (var symbol in array)
+            {
+                if (!symbol.Equals(separator))
+                {
+                    splitArray.Add(symbol);
+                }
+                i++;
+            }
+
+            return splitArray;
+        }
+        public void D()
+        {
+            Console.Write("Input source string: ");
+            var charArray = Console.ReadLine()?.ToCharArray();
+            
+            var splitArray = Split(charArray, ' ');
+
+            Console.WriteLine($"Reverse string - {string.Join("", splitArray)}");
+        }
+        //
+
+        private static string ToUpper(char[] charArray)
+        {
+            var upperString = string.Empty;
+            foreach (var symbol in charArray)
+            {
+                if ( symbol is (>= 'A' and <= 'Z') )
+                {
+                    upperString += symbol;
+                }
+            }
+            return upperString;
+        }
+
+        public void E()
+        {
+            Console.Write("Input source string: ");
+            var charArray = Console.ReadLine()?.ToCharArray();
+
+            var uppercaseArray = ToUpper(charArray);
+
+            Console.WriteLine($"Only uppercase string: {uppercaseArray}");
+        }
+        //
+        private static string ToEvenLetter(StringBuilder sb)
+        {
+            var upperString = string.Empty;
+            for (int i = 1; i < sb.Length; i+=2)
+            {
+                upperString += sb[i];
+            }
+
+            return upperString;
+        }
+        public void F()
+        {
+            Console.Write("Input source string: ");
+            var sb = new StringBuilder(Console.ReadLine());
+
+            var uppercaseArray = ToEvenLetter(sb);
+
+            Console.WriteLine($"Only uppercase string: {uppercaseArray.ToUpper()}");
+        }
+        //
+
         public void RunTask()
         {
             A();
             B();
             C();
+            D();
+            E();
+            F();
         }
     }
 }
