@@ -6,7 +6,6 @@ namespace DevIncubatorCore.Methods
 {
     class Olympic : ITask
     {
-
         private static int Max(params int[] collection)
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
@@ -28,6 +27,7 @@ namespace DevIncubatorCore.Methods
             if (collection == null) throw new ArgumentNullException(nameof(collection));
 
             int min = collection[0];
+
             for (int i = 0; i < collection.Length; i++)
             {
                 if (collection[i] < min)

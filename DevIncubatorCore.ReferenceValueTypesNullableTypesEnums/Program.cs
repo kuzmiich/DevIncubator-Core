@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.ArraysForeach
+namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
 {
     class Program
     {
@@ -8,8 +8,7 @@ namespace DevIncubatorCore.ArraysForeach
         {
             ITask[] tasks =
             {
-                new BubbleSortVariable(),
-                new TwoDimensionalArray()
+                new EmptyString(),
             };
             try
             {

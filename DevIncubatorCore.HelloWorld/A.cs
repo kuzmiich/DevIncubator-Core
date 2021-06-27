@@ -6,13 +6,12 @@ namespace DevIncubatorCore.HelloWorld
     {
         public void RunTask()
         {
-            Console.WriteLine("Input your name: ");
+            Console.Write("Input your name: ");
             var name = Console.ReadLine();
 
-            Console.WriteLine("Input your age: ");
-            var userMessage = Console.ReadLine();
-
-            var age = Extractor.GetInt32(userMessage);
+            Console.Write("Input your age: ");
+            
+            var age = Extractor.GetInt32(Console.ReadLine());
 
             Console.WriteLine($"My name is {name}. My age is {age}");
         }
