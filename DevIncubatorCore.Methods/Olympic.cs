@@ -10,7 +10,7 @@ namespace DevIncubatorCore.Methods
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
 
-            int max = 0;
+            var max = 0;
             for (int i = 0; i < collection.Length; i++)
             {
                 if (collection[i] > max)

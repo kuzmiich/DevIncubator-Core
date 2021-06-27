@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
+namespace DevIncubatorCore.ClassesStructures
 {
     class Program
     {
@@ -8,10 +8,8 @@ namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
         {
             ITask[] tasks =
             {
-                new EmptyString(), // +
-                new AverageAge(), // +
-                new DaysOfWeek(), // +
-                new Cycles() // +
+                new SchoolExecuter(),
+                new BelaviaExecuter()
             };
             try
             {
