@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace DevIncubatorCore.MainConstructions
 {
-    enum DayOfWeek
-    {
-        Monday = 1,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday,
-        Sunday
-    }
     class Days : ITask
     {
+        private enum DayOfWeek
+        {
+            Monday = 1,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
+        }
         public void RunTask()
         {
             bool isWork = true;

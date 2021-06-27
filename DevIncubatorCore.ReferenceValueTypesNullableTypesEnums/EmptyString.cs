@@ -30,6 +30,7 @@ namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
             Console.Write("Input count string: ");
             var count = Extractor.GetInt32(Console.ReadLine());
 
+            Console.WriteLine("Input strings: ");
             var sourceData = new string[count];
             for (int i = 0; i < count; i++)
             {
