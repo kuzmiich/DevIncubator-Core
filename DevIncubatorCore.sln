@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Interfaces
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Generics", "DevIncubatorCore.Generics\DevIncubatorCore.Generics.csproj", "{E2DB9987-7D80-4E71-AE53-24D0E06B8774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIncubatorCore.Collections", "PrimeNumbers\DevIncubatorCore.Collections.csproj", "{8483CF59-F4CC-4FBD-837C-CE05AFB93D20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Collections", "DevIncubatorCore.Collections\DevIncubatorCore.Collections.csproj", "{ABA11438-23DC-4DF8-A91B-727F802EE540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,10 +77,10 @@ Global
 		{E2DB9987-7D80-4E71-AE53-24D0E06B8774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2DB9987-7D80-4E71-AE53-24D0E06B8774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2DB9987-7D80-4E71-AE53-24D0E06B8774}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8483CF59-F4CC-4FBD-837C-CE05AFB93D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8483CF59-F4CC-4FBD-837C-CE05AFB93D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8483CF59-F4CC-4FBD-837C-CE05AFB93D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8483CF59-F4CC-4FBD-837C-CE05AFB93D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
