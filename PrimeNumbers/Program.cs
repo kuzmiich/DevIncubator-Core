@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualBasic;
+using DevIncubatorCore;
 
-namespace DevIncubatorCore.Generics
+namespace PrimeNumbers
 {
     class Program
     {
@@ -9,8 +9,8 @@ namespace DevIncubatorCore.Generics
         {
             ITask[] tasks =
             {
-                new TableExecuter(),
-                new RackStoreExecuter()
+                new PrimeNumbersExecuter(),
+
             };
             try
             {
