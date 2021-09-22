@@ -1,26 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.MainConstructions
 {
-    class Days : ITask
+    internal class Days : ITask
     {
-        private enum DayOfWeek
-        {
-            Monday = 1,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
         public void RunTask()
         {
-            bool isWork = true;
+            var isWork = true;
             while (isWork)
             {
                 Console.WriteLine("Input number day of week: ");
@@ -57,6 +43,17 @@ namespace DevIncubatorCore.MainConstructions
 
                 Console.WriteLine(dayOfWeek);
             }
+        }
+
+        private enum DayOfWeek
+        {
+            Monday = 1,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
         }
     }
 }

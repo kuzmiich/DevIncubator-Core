@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DevIncubatorCore.Generics.Components.RackStore.Base;
 using DevIncubatorCore.Generics.Components.RackStore.Products;
 
 namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
 {
-    static class ProductGenerator
+    internal static class ProductGenerator
     {
+        private static readonly List<string> ProductNames = new()
+        {
+            "Bread",
+            "Milk",
+            "Pasta",
+            "Porridge"
+        };
         private enum ProductType
         {
             Bread,
@@ -17,14 +20,6 @@ namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
             Pasta,
             Porridge
         }
-        private static readonly List<string> ProductNames = new()
-        {
-            "Bread", 
-            "Milk",
-            "Pasta",
-            "Porridge"
-        };
-        
         private static readonly Random _random = new();
 
         private static Bread GetBread()
@@ -40,10 +35,7 @@ namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
             {
                 var products = new List<Bread>();
 
-                for (int i = 0; i < count; i++)
-                {
-                    products.Add(GetBread());
-                }
+                for (var i = 0; i < count; i++) products.Add(GetBread());
 
                 return products;
             }
@@ -64,10 +56,7 @@ namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
             {
                 var products = new List<Milk>();
 
-                for (int i = 0; i < count; i++)
-                {
-                    products.Add(GetMilk());
-                }
+                for (var i = 0; i < count; i++) products.Add(GetMilk());
 
                 return products;
             }
@@ -89,10 +78,7 @@ namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
             {
                 var products = new List<Pasta>();
 
-                for (int i = 0; i < count; i++)
-                {
-                    products.Add(GetPasta());
-                }
+                for (var i = 0; i < count; i++) products.Add(GetPasta());
 
                 return products;
             }
@@ -113,10 +99,7 @@ namespace DevIncubatorCore.Generics.Components.RackStore.GeneratorService
             {
                 var products = new List<Porridge>();
 
-                for (int i = 0; i < count; i++)
-                {
-                    products.Add(GetPorridge());
-                }
+                for (var i = 0; i < count; i++) products.Add(GetPorridge());
 
                 return products;
             }

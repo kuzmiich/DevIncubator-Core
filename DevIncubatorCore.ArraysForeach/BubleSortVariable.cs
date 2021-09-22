@@ -1,67 +1,54 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace DevIncubatorCore.ArraysForeach
 {
-    enum CompareType
+    internal enum CompareType
     {
         Ascending,
         Descending
     }
-    class BubbleSortVariable : ITask
-    {
-        // min -> max
-        private void BubbleSortAscending(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = i + 1; j < array.Length; j++)
-                {
-                    if (array[i] > array[j])
-                    {
-                        (array[i], array[j]) = (array[j], array[i]);
-                    }
-                }
-            }
-        }
-        private void BubbleSortDescending(int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = i + 1; j < array.Length; j++)
-                {
-                    if (array[i] < array[j])
-                    {
-                        (array[i], array[j]) = (array[j], array[i]);
-                    }
-                }
-            }
-        }
-        //
-        private int[] BubbleSort(CompareType compare, params int[] array)
-        {
-            if (compare == CompareType.Ascending)
-            {
-                BubbleSortAscending(array);
-            }
-            else
-            {
-                BubbleSortDescending(array);
-            }
 
-            return array;
-        }
+    internal class BubbleSortVariable : ITask
+    {
         public void RunTask()
         {
             Console.WriteLine("Filling the array with values:");
             var arr = Console.ReadLine()?.Split().Select(int.Parse).ToArray();
 
-            var descendingArray = BubbleSort(CompareType.Descending, arr);
-            Console.WriteLine(string.Join(' ', descendingArray));
+            BubbleSort(in arr, CompareType.Descending);
 
-            var ascendingArray = BubbleSort(CompareType.Ascending, arr);
-            Console.WriteLine(string.Join(' ', ascendingArray));
+            Console.WriteLine(string.Join(' ', arr));
+
+            BubbleSort(in arr, CompareType.Ascending);
+
+            Console.WriteLine(string.Join(' ', arr));
+        }
+
+        // min -> max
+        private static void BubbleSortAscending(int[] array)
+        {
+            for (var i = 0; i < array.Length; i++)
+            for (var j = i + 1; j < array.Length; j++)
+                if (array[i] > array[j])
+                    (array[i], array[j]) = (array[j], array[i]);
+        }
+
+        private static void BubbleSortDescending(int[] array)
+        {
+            for (var i = 0; i < array.Length; i++)
+            for (var j = i + 1; j < array.Length; j++)
+                if (array[i] < array[j])
+                    (array[i], array[j]) = (array[j], array[i]);
+        }
+
+        //
+        private static void BubbleSort(in int[] array, CompareType compare)
+        {
+            if (compare == CompareType.Ascending)
+                BubbleSortAscending(array);
+            else
+                BubbleSortDescending(array);
         }
     }
 }

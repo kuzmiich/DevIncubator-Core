@@ -2,7 +2,7 @@
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class G : ITask
+    internal class G : ITask
     {
         public void RunTask()
         {
@@ -12,7 +12,7 @@ namespace DevIncubatorCore.HelloWorld
             Console.WriteLine("Input b (0..255): ");
             var b = Extractor.GetByte(Console.ReadLine());
 
-            var c = checked((byte)(a + b));
+            var c = checked((byte) (a + b));
 
             Console.WriteLine($"result - {c}");
         }

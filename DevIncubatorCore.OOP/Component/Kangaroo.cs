@@ -3,16 +3,15 @@ using DevIncubatorCore.OOP.Component.Base;
 
 namespace DevIncubatorCore.OOP.Component
 {
-    class Kangaroo : Animal
+    internal class Kangaroo : Animal
     {
         public Kangaroo()
         {
-
         }
-        public Kangaroo(string name, int footNumber, bool hasMustache) 
+
+        public Kangaroo(string name, int footNumber, bool hasMustache)
             : base(name, footNumber, hasMustache)
         {
-            
         }
 
         public override void Voice()

@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Generics",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevIncubatorCore.Collections", "DevIncubatorCore.Collections\DevIncubatorCore.Collections.csproj", "{ABA11438-23DC-4DF8-A91B-727F802EE540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIncubatorCore.Linq", "DevIncubatorCore.Linq\DevIncubatorCore.Linq.csproj", "{4E9B740B-A7F3-41A4-A583-78EE235EE930}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA11438-23DC-4DF8-A91B-727F802EE540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9B740B-A7F3-41A4-A583-78EE235EE930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9B740B-A7F3-41A4-A583-78EE235EE930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9B740B-A7F3-41A4-A583-78EE235EE930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9B740B-A7F3-41A4-A583-78EE235EE930}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

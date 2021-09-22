@@ -2,55 +2,63 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.StringStringBuilder
 {
-    class TextProcessor : ITask
+    internal class TextProcessor : ITask
     {
+        //
+
+        public void RunTask()
+        {
+            A();
+            B();
+            C();
+            D();
+            E();
+            F();
+        }
+
         public void A()
         {
             Console.Write("Input source string: ");
             var hashSetString = Console.ReadLine()?.Split().ToHashSet();
 
             Console.Write("String without repetitions - ");
-            foreach (var str in hashSetString)
-            {
-                Console.Write($"{str} ");
-            }
+            foreach (var str in hashSetString) Console.Write($"{str} ");
             Console.WriteLine();
         }
+
         //
         private static StringBuilder Insert(StringBuilder builder, int position, string text)
         {
-            if (position > builder.Length)
-            {
-                return new StringBuilder("Error, position out of range!");
-            }
+            if (position > builder.Length) return new StringBuilder("Error, position out of range!");
             return builder.Insert(position, text);
         }
 
-        private static StringBuilder Append(StringBuilder builder, string text) =>
-            builder.AppendLine(text);
+        private static StringBuilder Append(StringBuilder builder, string text)
+        {
+            return builder.AppendLine(text);
+        }
 
         private static StringBuilder Delete(StringBuilder builder, char criteria)
         {
             var startIndex = 0;
             foreach (var symbol in builder.GetChunks())
             {
-                if (symbol.Equals(criteria))
-                {
-                    break;
-                }
+                if (symbol.Equals(criteria)) break;
 
                 startIndex++;
             }
+
             const int Count = 1;
             return builder.Remove(startIndex, Count);
         }
 
-        private static StringBuilder Replace(StringBuilder builder, string old, string replace) =>
-            builder.Replace(old, replace);
+        private static StringBuilder Replace(StringBuilder builder, string old, string replace)
+        {
+            return builder.Replace(old, replace);
+        }
 
         public void B()
         {
@@ -72,13 +80,14 @@ namespace DevIncubatorCore.StringStringBuilder
             string[] data = { };
             if (splitOperationTypeAndData != null)
             {
-                var operationTypeJoin = (string.Join(' ', splitOperationTypeAndData[0]));
+                var operationTypeJoin = string.Join(' ', splitOperationTypeAndData[0]);
                 operationType = operationTypeJoin.Split(' ')[^1];
 
-                var dataJoin = (string.Join(' ', splitOperationTypeAndData[1]))
+                var dataJoin = string.Join(' ', splitOperationTypeAndData[1])
                     .Replace("\"", "");
                 data = dataJoin.Split(' ');
             }
+
             // end get data
             var editString = operationType switch
             {
@@ -90,10 +99,11 @@ namespace DevIncubatorCore.StringStringBuilder
             };
             Console.WriteLine(editString);
         }
+
         //
         private static void Reverse<T>(params T[] array)
         {
-            for (int i = 0; i < array.Length / 2; i++)
+            for (var i = 0; i < array.Length / 2; i++)
             {
                 var j = array.Length - i - 1;
                 (array[i], array[j]) = (array[j], array[i]);
@@ -109,6 +119,7 @@ namespace DevIncubatorCore.StringStringBuilder
 
             Console.WriteLine($"Reverse string - {string.Join("", charArray)}");
         }
+
         //
         private static IEnumerable<T> Split<T>(IEnumerable<T> array, T separator)
         {
@@ -116,20 +127,18 @@ namespace DevIncubatorCore.StringStringBuilder
             var i = 0;
             foreach (var symbol in array)
             {
-                if (!symbol.Equals(separator))
-                {
-                    splitArray.Add(symbol);
-                }
+                if (!symbol.Equals(separator)) splitArray.Add(symbol);
                 i++;
             }
 
             return splitArray;
         }
+
         public void D()
         {
             Console.Write("Input source string: ");
             var charArray = Console.ReadLine()?.ToCharArray();
-            
+
             var splitArray = Split(charArray, ' ');
 
             Console.WriteLine($"Reverse string - {string.Join("", splitArray)}");
@@ -140,12 +149,8 @@ namespace DevIncubatorCore.StringStringBuilder
         {
             var upperString = string.Empty;
             foreach (var symbol in charArray)
-            {
-                if ( symbol is (>= 'A' and <= 'Z') )
-                {
+                if (symbol is (>= 'A' and <= 'Z'))
                     upperString += symbol;
-                }
-            }
             return upperString;
         }
 
@@ -158,17 +163,16 @@ namespace DevIncubatorCore.StringStringBuilder
 
             Console.WriteLine($"Only uppercase string: {uppercaseArray}");
         }
+
         //
         private static string ToEvenLetter(StringBuilder sb)
         {
             var upperString = string.Empty;
-            for (int i = 1; i < sb.Length; i+=2)
-            {
-                upperString += sb[i];
-            }
+            for (var i = 1; i < sb.Length; i += 2) upperString += sb[i];
 
             return upperString;
         }
+
         public void F()
         {
             Console.Write("Input source string: ");
@@ -177,17 +181,6 @@ namespace DevIncubatorCore.StringStringBuilder
             var uppercaseArray = ToEvenLetter(sb);
 
             Console.WriteLine($"Only uppercase string: {uppercaseArray.ToUpper()}");
-        }
-        //
-
-        public void RunTask()
-        {
-            A();
-            B();
-            C();
-            D();
-            E();
-            F();
         }
     }
 }

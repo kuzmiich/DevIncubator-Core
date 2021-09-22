@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DevIncubatorCore.OOP.Component;
 using DevIncubatorCore.OOP.Component.Base;
 
 namespace DevIncubatorCore.OOP
 {
-    class AnimalExecuter : ITask
+    internal class AnimalExecuter : ITask
     {
         public void RunTask()
         {
@@ -39,15 +35,11 @@ namespace DevIncubatorCore.OOP
             Console.WriteLine(string.Empty.PadLeft(70, '-'));
 
             // is hungry tests
-            foreach (var animal in herd)
-            {
-                animal.IsHungry();
-            }
+            foreach (var animal in herd) animal.IsHungry();
 
             horse.IsHungry();
             kangaroo.IsHungry();
             dragonfly.IsHungry();
-
         }
     }
 }

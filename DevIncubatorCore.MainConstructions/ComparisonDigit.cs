@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.MainConstructions
 {
-    class ComparisonDigit : ITask
+    internal class ComparisonDigit : ITask
     {
         public void RunTask()
         {
@@ -23,14 +19,13 @@ namespace DevIncubatorCore.MainConstructions
                 while (temp > 0)
                 {
                     var remB = temp % 10;
-                    if (remA == remB)
-                    {
-                        Console.Write($"{remA} ");
-                    }
+                    if (remA == remB) Console.Write($"{remA} ");
                     temp /= 10;
                 }
+
                 a /= 10;
             }
+
             Console.WriteLine();
         }
     }

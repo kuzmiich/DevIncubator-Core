@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevIncubatorCore.InterfacesAbstractClasses.Component
+﻿namespace DevIncubatorCore.InterfacesAbstractClasses.Component
 {
     internal abstract class Printer
     {
@@ -13,6 +7,7 @@ namespace DevIncubatorCore.InterfacesAbstractClasses.Component
             Type = type;
             IsPresence = isPresence;
         }
+
         public string Type { get; }
         protected bool IsPresence { get; }
 

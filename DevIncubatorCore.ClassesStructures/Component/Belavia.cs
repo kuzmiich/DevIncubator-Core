@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevIncubatorCore.ClassesStructures.Component
+﻿namespace DevIncubatorCore.ClassesStructures.Component
 {
-    struct Belavia
+    internal struct Belavia
     {
         public Belavia(string destinationName, int aircraftNumber, string flightType)
         {
@@ -17,7 +11,7 @@ namespace DevIncubatorCore.ClassesStructures.Component
 
         public string DestinationName { get; set; }
         public int AircraftNumber { get; }
-        public string FlightType { get; private set; }
+        public string FlightType { get; }
 
         public override string ToString()
         {

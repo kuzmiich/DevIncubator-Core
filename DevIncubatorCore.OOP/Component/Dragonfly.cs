@@ -3,16 +3,15 @@ using DevIncubatorCore.OOP.Component.Base;
 
 namespace DevIncubatorCore.OOP.Component
 {
-    class Dragonfly : Animal
+    internal class Dragonfly : Animal
     {
         public Dragonfly()
         {
-
         }
-        public Dragonfly(string name, int footNumber, bool hasMustache) 
+
+        public Dragonfly(string name, int footNumber, bool hasMustache)
             : base(name, footNumber, hasMustache)
         {
-            
         }
 
         public override void Voice()

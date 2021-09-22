@@ -1,15 +1,15 @@
-﻿using DevIncubatorCore.Generics.Components.TableWriter;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DevIncubatorCore.Generics.Components.TableWriter;
 
 namespace DevIncubatorCore.Generics
 {
-    class TableExecuter : ITask
+    internal class TableExecuter : ITask
     {
         public void RunTask()
         {
             var id = 0;
-            var users = new List<User>() {};
+            var users = new List<User>();
 
             Console.Write("Input user count: ");
             var count = Extractor.GetInt32(Console.ReadLine());
@@ -22,7 +22,7 @@ namespace DevIncubatorCore.Generics
                 Console.Write("Input user age: ");
                 var age = Extractor.GetInt32(Console.ReadLine());
 
-                users.Add(new User()
+                users.Add(new User
                 {
                     Id = id,
                     Name = name,
@@ -31,6 +31,7 @@ namespace DevIncubatorCore.Generics
                 });
                 id++;
             }
+
             var table = new Table<User>(users);
             Console.WriteLine(table.ToString());
         }

@@ -2,12 +2,8 @@
 
 namespace DevIncubatorCore.Methods
 {
-    class FullName : ITask
+    internal class FullName : ITask
     {
-        private static string GetFullName(string firstName = "", string surname = "", string lastName = "")
-        {
-            return $"{firstName} {surname} {lastName}";
-        }
         public void RunTask()
         {
             var firstName = "Vasily";
@@ -15,6 +11,11 @@ namespace DevIncubatorCore.Methods
             var lastName = "Ivanov";
 
             Console.WriteLine(GetFullName(firstName, surname, lastName));
+        }
+
+        private static string GetFullName(string firstName = "", string surname = "", string lastName = "")
+        {
+            return $"{firstName} {surname} {lastName}";
         }
     }
 }

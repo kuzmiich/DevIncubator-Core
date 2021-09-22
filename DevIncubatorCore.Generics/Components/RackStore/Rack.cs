@@ -4,10 +4,8 @@ using DevIncubatorCore.Generics.Components.RackStore.Base;
 
 namespace DevIncubatorCore.Generics.Components.RackStore
 {
-    class Rack<T> : IEnumerable<T> where T : Product
+    internal class Rack<T> : IEnumerable<T> where T : Product
     {
-        public static int Count { get; private set; }
-
         public Rack()
         {
         }
@@ -17,13 +15,9 @@ namespace DevIncubatorCore.Generics.Components.RackStore
             Products = products;
             Count += products.Count;
         }
-        public List<T> Products { get; private set; }
 
-        public void Add(T product)
-        {
-            Products.Add(product);
-            Count++;
-        }
+        public static int Count { get; private set; }
+        public List<T> Products { get; }
 
         public IEnumerator<T> GetEnumerator()
         {
@@ -33,6 +27,12 @@ namespace DevIncubatorCore.Generics.Components.RackStore
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public void Add(T product)
+        {
+            Products.Add(product);
+            Count++;
         }
     }
 }

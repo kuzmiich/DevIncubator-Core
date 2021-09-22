@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.ClassesStructures.Component
 {
-    class Student
+    internal class Student
     {
         private const int SchoolNumber = 201;
 
@@ -17,8 +13,8 @@ namespace DevIncubatorCore.ClassesStructures.Component
 
         public Student()
         {
-            
         }
+
         public Student(string name, string lastName, double gradeAverage)
         {
             Console.WriteLine("Dynamic constructor with parameters has started");
@@ -28,6 +24,7 @@ namespace DevIncubatorCore.ClassesStructures.Component
             Count++;
             Console.WriteLine($"Students number = {Count}");
         }
+
         public static int Count { get; private set; }
         public string Name { get; }
         public string LastName { get; }

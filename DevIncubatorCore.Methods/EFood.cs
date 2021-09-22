@@ -2,7 +2,7 @@
 
 namespace DevIncubatorCore.Methods
 {
-    class EFood : ITask
+    internal class EFood : ITask
     {
         public void RunTask()
         {
@@ -22,15 +22,13 @@ namespace DevIncubatorCore.Methods
             if (needTable)
             {
                 Console.Write("How much table set count you need? ");
-                tableSetCount = Extractor.GetInt32(Console.ReadLine()); 
-                if (tableSetCount < 0)
-                {
-                    tableSetCount = 0;
-                }
+                tableSetCount = Extractor.GetInt32(Console.ReadLine());
+                if (tableSetCount < 0) tableSetCount = 0;
             }
-            
-            Console.WriteLine($"You ordered {burgersCount} burgers, {lattesCount} lattes, {iceCreamsCount} ice cream\n" +
-                              $"Additional {tableSetCount} table set");
+
+            Console.WriteLine(
+                $"You ordered {burgersCount} burgers, {lattesCount} lattes, {iceCreamsCount} ice cream\n" +
+                $"Additional {tableSetCount} table set");
         }
     }
 }

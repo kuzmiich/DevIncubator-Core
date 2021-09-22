@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevIncubatorCore.Generics.Components.TableWriter
+﻿namespace DevIncubatorCore.Generics.Components.TableWriter
 {
     internal class User
     {
         public User()
         {
-            
         }
+
         public User(int id, string name, string surname, int? age)
         {
             Id = id;
@@ -19,6 +13,7 @@ namespace DevIncubatorCore.Generics.Components.TableWriter
             Surname = surname;
             Age = age;
         }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -26,7 +21,7 @@ namespace DevIncubatorCore.Generics.Components.TableWriter
 
         public override string ToString()
         {
-            return $"{Id, 2}{Name, 9}{Surname, 12}{Age, 6}";
+            return $"{Id,2}{Name,9}{Surname,12}{Age,6}";
         }
     }
 }

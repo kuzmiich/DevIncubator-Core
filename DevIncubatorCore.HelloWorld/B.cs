@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class B : ITask
+    internal class B : ITask
     {
         public void RunTask()
         {
@@ -24,6 +20,7 @@ namespace DevIncubatorCore.HelloWorld
                 Console.WriteLine("Runtime error");
                 return;
             }
+
             Console.WriteLine($"{d} {b} {c}");
         }
     }

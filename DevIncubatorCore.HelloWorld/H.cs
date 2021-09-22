@@ -2,7 +2,7 @@
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class H : ITask
+    internal class H : ITask
     {
         public void RunTask()
         {
@@ -11,7 +11,7 @@ namespace DevIncubatorCore.HelloWorld
 
             Console.WriteLine($"a = {a}, b = {b}");
 
-            b = (int)a;
+            b = (int) a;
 
             Console.WriteLine($"a = {a}, b = {b}");
         }

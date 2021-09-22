@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class F : ITask
+    internal class F : ITask
     {
         public void RunTask()
         {
@@ -16,7 +12,7 @@ namespace DevIncubatorCore.HelloWorld
             Console.WriteLine("Input b (0..255): ");
             var b = Extractor.GetByte(Console.ReadLine());
 
-            var c = (byte)(a + b);
+            var c = (byte) (a + b);
 
             Console.WriteLine($"result - {c}");
         }

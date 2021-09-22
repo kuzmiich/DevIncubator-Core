@@ -3,14 +3,13 @@ using DevIncubatorCore;
 
 namespace PrimeNumbers
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ITask[] tasks =
             {
-                new PrimeNumbersExecuter(),
-
+                new PrimeNumbersExecuter()
             };
             try
             {

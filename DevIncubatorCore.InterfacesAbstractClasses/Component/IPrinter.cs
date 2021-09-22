@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DevIncubatorCore.InterfacesAbstractClasses.Component
+﻿namespace DevIncubatorCore.InterfacesAbstractClasses.Component
 {
     internal interface IPrinter
     {

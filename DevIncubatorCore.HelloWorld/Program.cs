@@ -2,7 +2,7 @@
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class Program
+    internal class Program
     {
         internal static void Main(string[] args)
         {
@@ -16,7 +16,7 @@ namespace DevIncubatorCore.HelloWorld
                 new F(),
                 new G(),
                 new H(),
-                new I(),
+                new I()
             };
             try
             {

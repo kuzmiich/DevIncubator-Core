@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.Generics.Components.TableWriter
 {
@@ -13,11 +9,11 @@ namespace DevIncubatorCore.Generics.Components.TableWriter
         {
             Users = users;
         }
-        public List<T> Users { get; private set; }
+
+        public List<T> Users { get; }
 
 
-
-        public T this [int index]
+        public T this[int index]
         {
             get => Users[index];
             set => Users[index] = value;
@@ -35,7 +31,7 @@ namespace DevIncubatorCore.Generics.Components.TableWriter
 
         public override string ToString()
         {
-            return $"ID |  Name  |  Surname  | Age |\n" +
+            return "ID |  Name  |  Surname  | Age |\n" +
                    $"{string.Join('\n', Users)}";
         }
     }

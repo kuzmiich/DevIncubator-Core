@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevIncubatorCore.HelloWorld
 {
-    class I : ITask
+    internal class I : ITask
     {
         public void RunTask()
         {
@@ -23,13 +19,9 @@ namespace DevIncubatorCore.HelloWorld
             const string no = "No";
 
             if (a.Equals(yes) && b.Equals(yes) && c.Equals(no))
-            {
                 Console.WriteLine("Today, you can go for a walk with friends.");
-            }
             else
-            {
                 Console.WriteLine("You still have things to do, you can`t go out with your friends today.");
-            }
         }
     }
 }

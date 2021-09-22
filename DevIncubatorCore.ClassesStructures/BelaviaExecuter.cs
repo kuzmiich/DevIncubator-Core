@@ -1,25 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DevIncubatorCore.ClassesStructures.Component;
 
 namespace DevIncubatorCore.ClassesStructures
 {
-    class BelaviaExecuter : ITask
+    internal class BelaviaExecuter : ITask
     {
         private const int MaxAircraftNumber = 10000;
 
-        private static string[] _destinationNames =
+        private static readonly string[] _destinationNames =
         {
             "Minsk", "London", "Vashington", "Talin", "Copenhagen", "Piter"
         };
-        private static string[] _aircraftTypes =
+
+        private static readonly string[] _aircraftTypes =
         {
             "Passenger", "Cargo", "Combat"
         };
-        private static Random _random = new();
+
+        private static readonly Random _random = new();
 
         public void RunTask()
         {
@@ -27,7 +25,7 @@ namespace DevIncubatorCore.ClassesStructures
             var count = Extractor.GetInt32(Console.ReadLine());
 
             var flights = new Belavia[count];
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
             {
                 var name = _destinationNames[_random.Next(_destinationNames.Length)];
                 var aircraftNumber = _random.Next(MaxAircraftNumber);
@@ -39,12 +37,8 @@ namespace DevIncubatorCore.ClassesStructures
             var searchType = Console.ReadLine();
 
             foreach (var flight in flights)
-            {
                 if (searchType.Equals(flight.FlightType))
-                {
                     Console.WriteLine(flight);
-                }
-            }
         }
     }
 }

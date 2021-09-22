@@ -2,16 +2,16 @@
 
 namespace DevIncubatorCore.MainConstructions
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ITask[] tasks =
             {
                 new MultiplicationTable(), // +
                 new Days(), // +
                 new EvenNumber(), // +
-                new ComparisonDigit(),  // +
+                new ComparisonDigit() // +
             };
             try
             {

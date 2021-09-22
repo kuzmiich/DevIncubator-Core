@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DevIncubatorCore.InterfacesAbstractClasses.Component;
+﻿using DevIncubatorCore.InterfacesAbstractClasses.Component;
 
 namespace DevIncubatorCore.InterfacesAbstractClasses
 {
-    class PrinterExecuter : ITask
+    internal class PrinterExecuter : ITask
     {
         public void RunTask()
         {
