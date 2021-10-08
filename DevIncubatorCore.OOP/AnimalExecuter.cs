@@ -35,7 +35,8 @@ namespace DevIncubatorCore.OOP
             Console.WriteLine(string.Empty.PadLeft(70, '-'));
 
             // is hungry tests
-            foreach (var animal in herd) animal.IsHungry();
+            foreach (var animal in herd) 
+                animal.IsHungry();
 
             horse.IsHungry();
             kangaroo.IsHungry();

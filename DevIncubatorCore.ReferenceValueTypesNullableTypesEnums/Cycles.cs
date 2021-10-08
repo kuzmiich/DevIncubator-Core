@@ -13,18 +13,19 @@ namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
             stopWatch.Start();
             var j = 0;
             for (var i = 0; i < count; i++)
+            {
                 while (j < count)
                 {
                     var obj = new object();
                     j++;
                 }
-
+            }
             stopWatch.Stop();
 
             var elapsedTime = stopWatch.Elapsed;
 
-            Console.WriteLine(
-                $"Iteration count - {j}, execution time seconds - {elapsedTime.Seconds}, execution time milliseconds - {elapsedTime.Milliseconds}");
+            Console.WriteLine($"Iteration count - {j}, execution time seconds - {elapsedTime.Seconds}, " +
+                              $"execution time milliseconds - {elapsedTime.Milliseconds}");
         }
     }
 }

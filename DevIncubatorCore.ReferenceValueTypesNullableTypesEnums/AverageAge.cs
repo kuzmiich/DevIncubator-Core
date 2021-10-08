@@ -35,11 +35,13 @@ namespace DevIncubatorCore.ReferenceValueTypesNullableTypesEnums
             var count = 0.0;
             var sum = 0;
             foreach (var element in array)
+            {
                 if (element.HasValue)
                 {
                     sum += element.Value;
                     count++;
                 }
+            }
 
             return sum / count;
         }

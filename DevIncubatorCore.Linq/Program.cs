@@ -25,6 +25,7 @@ namespace DevIncubatorCore.Linq
                 new LinqBegin23(),
                 new LinqBegin24(),
                 new LinqBegin25(),
+                new LinqBegin29(),
                 new LinqBegin30()
             };
             try

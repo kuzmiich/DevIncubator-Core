@@ -8,18 +8,18 @@ namespace DevIncubatorCore.Linq.LinqBegin
         public void RunTask()
         {
             var k = 6;
-                          var arr = new[]
-                          {
-                              "enumerable.Range",
-                              "string",
-                              "Hello",
-                              "Help",
-                              "System.Collections.Generic",
-                              "System.Linq",
-                              "List",
-                              "Yes",
-                              "No"
-                          };
+            var arr = new[]
+            {
+              "enumerable.Range",
+              "string",
+              "Hello",
+              "Help",
+              "System.Collections.Generic",
+              "System.Linq",
+              "List",
+              "Yes",
+              "No"
+            };
             var result = arr.Take(k)
                 .Where(str => str.Length % 2 == 1 &&
                     char.IsUpper(str.First()))

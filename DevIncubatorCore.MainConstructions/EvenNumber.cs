@@ -12,18 +12,28 @@ namespace DevIncubatorCore.MainConstructions
             Console.WriteLine("Input end range number: ");
             var m = Extractor.GetInt32(Console.ReadLine());
 
-            if (n > m) 
+            if (n > m)
+            {
                 (n, m) = (m, n); // swap
-            // if n not even
-            if (n % 2 != 0) 
-                n++;
-            
-            // if n not even
-            if (n % 2 != 0) 
-                n++;
+            }
 
-            for (var i = n; i <= m; i += 2) 
+            // if n not even
+            if (n % 2 != 0)
+            {
+                n++;
+            }
+
+            // if n not even
+            if (n % 2 != 0)
+            {
+                n++;
+            }
+
+            for (var i = n; i <= m; i += 2)
+            {
                 Console.Write($"{i} ");
+            }
+
             Console.WriteLine();
         }
     }
