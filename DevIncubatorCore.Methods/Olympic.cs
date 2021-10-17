@@ -13,8 +13,10 @@ namespace DevIncubatorCore.Methods
             if (strArrayNumbers?.Length == 1) return;
             var participantsList = new List<int>();
 
-            foreach (var strNumber in strArrayNumbers) 
+            foreach (var strNumber in strArrayNumbers)
+            {
                 participantsList.Add(Extractor.GetInt32(strNumber));
+            }
 
             var participantsArray = participantsList.ToArray();
 
@@ -39,8 +41,12 @@ namespace DevIncubatorCore.Methods
 
             var max = 0;
             for (var i = 0; i < collection.Length; i++)
+            {
                 if (collection[i] > max)
+                {
                     max = collection[i];
+                }
+            }
 
             return max;
         }
@@ -52,8 +58,12 @@ namespace DevIncubatorCore.Methods
             var min = collection[0];
 
             for (var i = 0; i < collection.Length; i++)
+            {
                 if (collection[i] < min)
+                {
                     min = collection[i];
+                }
+            }
 
             return min;
         }
@@ -63,8 +73,10 @@ namespace DevIncubatorCore.Methods
             if (collection == null) throw new ArgumentNullException(nameof(collection));
 
             var sum = 0;
-            foreach (var element in collection) 
+            foreach (var element in collection)
+            {
                 sum += element;
+            }
 
             return sum;
         }

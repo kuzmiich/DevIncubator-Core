@@ -14,7 +14,7 @@ namespace DevIncubatorCore.HelloWorld
 
             Console.Write("Input char value: ");
             var c = Extractor.GetChar(Console.ReadLine());
-
+            
             if (d == default || b == default || c == default)
             {
                 Console.WriteLine("Runtime error");

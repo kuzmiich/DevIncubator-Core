@@ -16,8 +16,10 @@ namespace PrimeNumbers
 
         private static bool IsPrime(int number)
         {
-            if (number == 1) return false;
-            if (number == 2) return true;
+            if (number == 1) 
+                return false;
+            if (number == 2) 
+                return true;
 
             var limit = Math.Ceiling(Math.Sqrt(number));
             for (var i = 2; i <= limit; i++)
@@ -30,18 +32,22 @@ namespace PrimeNumbers
         public static IEnumerable<int> GetPrimeNumbers(int count)
         {
             var list = new List<int>();
-            if (count < 0) return list;
+            if (count < 0) 
+                return list;
+            
             var i = 0;
             var number = 1;
             while (i < count)
-            while (true)
             {
-                number++; // start with number == 2
-                if (IsPrime(number))
+                while (true)
                 {
-                    list.Add(number);
-                    i++;
-                    break;
+                    number++; // start with number == 2
+                    if (IsPrime(number))
+                    {
+                        list.Add(number);
+                        i++;
+                        break;
+                    }
                 }
             }
 

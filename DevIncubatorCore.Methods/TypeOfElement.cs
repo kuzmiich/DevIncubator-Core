@@ -11,7 +11,11 @@ namespace DevIncubatorCore.Methods
 
         private void ShowType(params object[] objects)
         {
-            foreach (var obj in objects) Console.Write($"{obj.GetType()} ");
+            foreach (var obj in objects)
+            {
+                Console.Write($"{obj.GetType()} ");
+            }
+
             Console.WriteLine();
         }
     }

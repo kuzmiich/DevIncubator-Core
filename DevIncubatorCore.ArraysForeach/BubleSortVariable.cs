@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DevIncubatorCore.ArraysForeach
@@ -26,18 +27,22 @@ namespace DevIncubatorCore.ArraysForeach
         }
 
         // min -> max
-        private static void BubbleSortAscending(int[] array)
+        private static void BubbleSortAscending(IList<int> array)
         {
-            for (var i = 0; i < array.Length; i++)
-            for (var j = i + 1; j < array.Length; j++)
-                if (array[i] > array[j])
-                    (array[i], array[j]) = (array[j], array[i]);
+            for (var i = 0; i < array.Count; i++)
+            {
+                for (var j = i + 1; j < array.Count; j++)
+                {
+                    if (array[i] > array[j])
+                        (array[i], array[j]) = (array[j], array[i]);
+                }
+            }
         }
 
-        private static void BubbleSortDescending(int[] array)
+        private static void BubbleSortDescending(IList<int> array)
         {
-            for (var i = 0; i < array.Length; i++)
-            for (var j = i + 1; j < array.Length; j++)
+            for (var i = 0; i < array.Count; i++)
+            for (var j = i + 1; j < array.Count; j++)
                 if (array[i] < array[j])
                     (array[i], array[j]) = (array[j], array[i]);
         }
@@ -45,10 +50,14 @@ namespace DevIncubatorCore.ArraysForeach
         //
         private static void BubbleSort(in int[] array, CompareType compare)
         {
-            if (compare == CompareType.Ascending)
+            if (compare is CompareType.Ascending)
+            {
                 BubbleSortAscending(array);
+            }
             else
+            {
                 BubbleSortDescending(array);
+            }
         }
     }
 }

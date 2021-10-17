@@ -12,7 +12,8 @@ namespace DevIncubatorCore.ArraysForeach
             Console.Write("Input m: ");
             var m = Extractor.GetInt32(Console.ReadLine());
 
-            if (n < 0 || m < 0) Console.WriteLine("Error, number n and m is natural");
+            if (n < 0 || m < 0) 
+                Console.WriteLine("Error, number n and m is natural");
 
             var arr = new int[n, m];
 
@@ -29,7 +30,8 @@ namespace DevIncubatorCore.ArraysForeach
         {
             var sum = 0;
 
-            foreach (var element in arr) sum += element;
+            foreach (var element in arr) 
+                sum += element;
 
             return sum;
         }
@@ -37,8 +39,12 @@ namespace DevIncubatorCore.ArraysForeach
         private static int[,] GetArrayElementDifference(int[,] arr, int n, int m)
         {
             for (var i = 0; i < n; i++)
-            for (var j = 0; j < m; j++)
-                arr[i, j] = i - j;
+            {
+                for (var j = 0; j < m; j++)
+                {
+                    arr[i, j] = i - j;
+                }
+            }
 
             return arr;
         }
@@ -47,7 +53,11 @@ namespace DevIncubatorCore.ArraysForeach
         {
             for (var i = 0; i < n; i++)
             {
-                for (var j = 0; j < m; j++) Console.Write($"{arr[i, j],3}");
+                for (var j = 0; j < m; j++)
+                {
+                    Console.Write($"{arr[i, j],3}");
+                }
+
                 Console.WriteLine();
             }
         }

@@ -19,7 +19,11 @@ namespace DevIncubatorCore.MainConstructions
                 while (temp > 0)
                 {
                     var remB = temp % 10;
-                    if (remA == remB) Console.Write($"{remA} ");
+                    if (remA == remB)
+                    {
+                        Console.Write($"{remA} ");
+                    }
+
                     temp /= 10;
                 }
 
